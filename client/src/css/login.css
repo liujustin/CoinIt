@@ -1,0 +1,21 @@
+body {
+    background-color: #EEEEEE;
+}
+
+.column {
+    max-width: 450px;
+}
+
+.login-container {    
+    top: 50%;
+    margin-top: 30%;
+    height: 100px;
+    width: 600px;
+    justify-content: center;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
