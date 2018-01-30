@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from 'semantic-ui-react'
 
 const LoginButton = () => (
-    <Button>Click Here to Login</Button>
+    <a className="ui blue large primary button" href="/login">Click Here to Login</a>
 );
 
 export default LoginButton
