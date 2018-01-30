@@ -10,7 +10,7 @@ const app = express();
 
 serverConfig(app);
 routesConfig(app);
-apiConfig(axios);
+apiConfig();
 
 // Local setup
 app.listen(process.env.PORT || 5000);
