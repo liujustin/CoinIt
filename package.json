@@ -5,8 +5,21 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "cd client && npm start"
+    "server": "nodemon server/app.js",
+    "concurrent": "concurrently 'npm run server' 'cd client && npm start'",
+    "start": "npm run concurrent"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
+    "cors": "^2.8.4",
+    "dotenv": "^5.0.0",
+    "express": "^4.16.2",
+    "mongoose": "^5.0.2",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.14.11"
+  }
 }
