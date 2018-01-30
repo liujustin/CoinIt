@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import LoginButton from './common/loginButton'
-import WelcomeHeader from './common/welcomeHeader'
+import LoginButton from './common/loginButton';
+import WelcomeHeader from './common/welcomeHeader';
+import MyChart from './highcharts/TestChart';
 
 class App extends Component {
     render() {
@@ -12,6 +13,10 @@ class App extends Component {
             </div>
             <div className="Login Button">
                 <LoginButton />
+            </div>
+            <br />
+            <div className="chart">
+                <MyChart />
             </div>
         </div>
         );
