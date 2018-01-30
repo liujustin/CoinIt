@@ -12,6 +12,7 @@ const apiConfig = (app) => {
         console.log('Symbol: ' + response.data[i].symbol);
         console.log('Price in USD: ' + response.data[i].price_usd);
         console.log('Rank: ' + response.data[i].rank);
+        console.log('===============');
 
         let  _name = response.data[i].name;
         let _symbol = response.data[i].symbol;
