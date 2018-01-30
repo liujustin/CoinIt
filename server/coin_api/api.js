@@ -1,3 +1,5 @@
+// Note: this should be rendered through react, but placed here for categorization purposes
+
 const axios = require('axios');
 const api_url = "https://api.coinmarketcap.com/v1/ticker/?limit=10";
 
