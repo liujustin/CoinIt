@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../css/App.css';
 import WelcomeHeader from '../common/welcomeHeader'
-import MyChart from './highcharts/TestChart';
+import MyChart from '../highcharts/TestChart';
 
 class App extends Component {
     render() {
