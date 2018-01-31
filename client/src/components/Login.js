@@ -54,7 +54,7 @@ class Login extends Component {
                             </div>
                         </form>
                         <div className="ui bottom attached warning message">
-                            <p>Don't have an account? <a href="/sign-up">Sign Up</a></p>
+                            <p>Don't have an account? <a href="/register">Register Here</a></p>
                         </div>
                     </div>
                 </div>
