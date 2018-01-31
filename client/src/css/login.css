@@ -6,14 +6,11 @@ body {
     max-width: 450px;
 }
 
-.login-container {    
-    top: 50%;
-    margin-top: 30%;
-    height: 100px;
-    width: 600px;
-    justify-content: center;
+.login-container {
+    height: 25%;
+    width: 25%;
     position: absolute;
-    top:0;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
