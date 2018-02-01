@@ -1,4 +1,3 @@
-const express = require('express');
 const session = require('express-session')
 const morgan = require('morgan');
 const mongoose = require('mongoose');
@@ -6,7 +5,7 @@ const cors = require('cors');
 const dotenv = require('dotenv').config();
 const bodyParser = require('body-parser');
 
-const serverConfig = (app) => {
+const serverConfig = (app,passport) => {
   // Configs for Mongo
   mongoose.Promise = global.Promise;
   mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/crypto_tracker' );
@@ -29,8 +28,8 @@ const serverConfig = (app) => {
   }));
   // Passport express stuff
     // Doc @ https://www.npmjs.com/package/passport
-  app.use(passport.intialize());
-  app.use(passport.session(());
+  app.use(passport.initialize());
+  app.use(passport.session());
 }
 
 module.exports = serverConfig;
