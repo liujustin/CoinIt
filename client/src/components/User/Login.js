@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import '../css/login.css';
-import WelcomeHeader from '../common/welcomeHeader'
+import WelcomeHeader from '../WelcomeHeader'
 import { Icon } from 'semantic-ui-react'
 
 class Login extends Component {

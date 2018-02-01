@@ -9,9 +9,11 @@ const userConfig = (app) => {
   });
 
   app.post('/users/add', function(req, res) {
+
     var full_name = req.body.full_name;
     var email = req.body.email;
     var password = req.body.password;
+
     var user = new User ({
       full_name: full_name,
       email: email,
