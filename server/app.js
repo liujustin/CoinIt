@@ -10,7 +10,6 @@ const app = express();
 
 serverConfig(app);
 routesConfig(app);
-apiConfig();
 
 // Local setup
 app.listen(process.env.PORT || 5000);

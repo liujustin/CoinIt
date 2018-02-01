@@ -1,9 +1,10 @@
-// Note: this should be rendered through react, but placed here for categorization purposes
-
 const axios = require('axios');
 const api_url = "https://api.coinmarketcap.com/v1/ticker/?limit=10";
 
 const apiConfig = (app) => {
+    app.get('/', (req, res) => {
+      res.send('Server is running.')
+    });
 
     axios.get(api_url).then(response => {
       // loop through each for its name

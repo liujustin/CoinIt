@@ -1,7 +1,8 @@
+// Index for all Routes
+const apiConfig = require('../coin_api/api');
+
 const routesConfig = (app) => {
-  app.get('/', (req, res) => {
-    res.send('Server is running.')
-  });
+    apiConfig(app);
 };
 
 module.exports = routesConfig;
