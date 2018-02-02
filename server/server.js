@@ -14,6 +14,10 @@ const serverConfig = (app,passport) => {
     process.exit();
   });
 
+  // Config for Passport
+  require('./config/passport')(passport);
+    // ** Note: passport already passed into serverConfig()
+
   // Configs for Express
   app.use(cors());
   // To allow req.body etc.
