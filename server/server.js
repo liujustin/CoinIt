@@ -1,5 +1,4 @@
 const session = require('express-session')
-const morgan = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv').config();
