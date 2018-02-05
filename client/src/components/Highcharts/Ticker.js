@@ -52,7 +52,7 @@ class Ticker extends Component {
                         </h4>
                     </td>
                     <td>
-                        ${Math.round(100 * el.price_usd) / 100}
+                        ${parseFloat(el.price_usd).toFixed(2)}
                     </td>
                 </tr>
             )
