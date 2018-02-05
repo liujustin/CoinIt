@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import WelcomeHeader from './components/WelcomeHeader'
 import MyChart from './components/Highcharts/TestChart';
+import Ticker from './components/Highcharts/Ticker';
 
 class App extends Component {
     render() {
@@ -12,8 +13,8 @@ class App extends Component {
                 </div>
             </div>
             <br />
-            <div className="chart">
-                <MyChart />
+            <div className="ticker">
+                <Ticker />
             </div>
         </div>
         );
