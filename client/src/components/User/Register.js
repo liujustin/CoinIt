@@ -30,20 +30,22 @@ class Register extends Component {
         });
     }
 
-    handleInputChange(event) {
+    handleInputChange = (event) => {
       this.setState({
         params: {
-          this.state.params,
+          ...this.state.params,
+          // '...' is jsx for "spread" operator
           [event.target.name]: event.target.value
         }
       });
     }
 
-    handleSubmit(event) {
+    handleSubmit = (event) => {
       const params = this.state.params;
 
-      axios.post('/user/register', params)
+      axios.post('http://localhost:5000/user/register', params)
         .then(function(response) {
+          console.log(response);
           this.setState({
             authenicated: response.data.authenicated
           })
@@ -73,7 +75,7 @@ class Register extends Component {
                                     placeholder="E-mail address"
                                     autoComplete="off"
                                     value={this.state.email}
-                                    onChange={(e) => this.handleUserInput(e)} />
+                                    onChange={ this.handleInputChange } />
                             </div>
                         </div>
                         <div className="field">
@@ -82,12 +84,20 @@ class Register extends Component {
                                 <input type="password"
                                     name="password"
                                     placeholder="Password"
-                                    autoComplete="off"
                                     value={this.state.password}
-                                    onChange={(e) => this.handleUserInput(e)} />
+                                    onChange={ this.handleInputChange } />
                             </div>
                         </div>
-                        {/* <div className="ui fluid large orange submit button">Login</div> */}
+                        <div className="field">
+                            <div className="ui left icon input">
+                                <Icon name="lock" />
+                                <input type="password"
+                                    name="passwordRepeat"
+                                    placeholder="Repeat Password"
+                                    value={this.state.password}
+                                    onChange={ this.handleInputChange } />
+                            </div>
+                        </div>
                         <input className="ui fluid large orange submit button" type="submit" value="REGISTER" />
                     </div>
                 </form>
