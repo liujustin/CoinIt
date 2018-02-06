@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 const dotenv = require('dotenv').config();
 const session = require('express-session');
+=======
+const session = require('express-session')
+>>>>>>> dev
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
