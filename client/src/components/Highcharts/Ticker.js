@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../css/charts.css'
 import axios from 'axios';
 
 const api_url = "https://api.coinmarketcap.com/v1/ticker/?limit=10";
@@ -55,7 +54,7 @@ class Ticker extends Component {
             )
         });
         return (
-            <table className="ui very basic collapsing celled table">
+            <table id="ticket-chart" className="ui very basic collapsing celled table">
             <thead>
                 <tr><th>Rank</th>
                 <th>Crypto</th>
