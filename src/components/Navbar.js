@@ -15,9 +15,10 @@ class Navbar extends Component {
                     <img class="crypto-image" src="../assets/images/Bitcoin.png" alt="crypto logo"/>
                     <span class="logo-text">CoinIt!</span>
                 </a>
-                <div class="right menu">
+              {/* <div class="right menu">
                     <a href="/login" class="item"><span class="menu-text">Login</span></a>
                 </div>
+                */}                
                 </div>
             </div>
           </div>
