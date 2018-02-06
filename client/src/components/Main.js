@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import Login from './User/Login';
 import Register from './User/Register';
-import TestChart from './Highcharts/Ticker';
+import Ticker from './Highcharts/Ticker';
 
 export default class Main extends Component {
 
