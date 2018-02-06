@@ -90,8 +90,24 @@
     color: red;
 }
 
+.red-percent:before {
+    visibility: hidden;
+    margin-right: -8em;
+    font-family: FontAwesome;
+    color: black;
+    content: "\f078";
+}
+
 .green-percent {
     color: green;
+}
+
+.green-percent:before {
+    visibility: hidden;
+    margin-right: -8em;
+    font-family: FontAwesome;
+    color: black;
+    content: 'Price Change (1h): \f077';
 }
 
 /** Charts **/
@@ -105,4 +121,77 @@
   width: 90em;
   height: 50em;
   margin-right: 10em;
+}
+
+.ticker_price {
+  visibility: hidden;
+  margin-left: -5em;
+}
+
+
+
+/** Mpbile **/
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #ticker {
+      margin-top: 5em;
+      margin-left: 0em;
+      width: 100%;
+      margin-right: 0em;
+      display: flow-root;
+    }
+
+    table {
+      zoom: 115%;
+    }
+
+    #ticker_header {
+      margin-bottom: -12em;
+      visibility: hidden;
+    }
+
+    #ticker_data {
+      display:inline-table;
+    }
+
+    .ticker_price {
+      visibility: visible;
+      margin-left: 0em;
+    }
+
+    .green-percent:before {
+        visibility: visible;
+        margin-right: 0em;
+        font-family: FontAwesome;
+        color: black;
+        content: '\f077';
+    }
+
+    .red-percent:before {
+        visibility: hidden;
+        margin-right: -8em;
+        font-family: FontAwesome;
+        color: black;
+        content: "\f078";
+    }
+
+    #ticket_1hr {
+      visibility: hidden;
+    }
+}
+
+/* ----------- Google Pixel XL ----------- */
+
+/* Portrait and Landscape */
+@media screen
+  and (device-width: 360px)
+  and (device-height: 640px)
+  and (-webkit-device-pixel-ratio: 4) {
+
+
 }

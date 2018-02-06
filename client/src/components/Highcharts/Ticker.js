@@ -33,9 +33,9 @@ class Ticker extends Component {
         const crypto = this.state.cryptoArray.map((data, index) => {
             var imageUrl = `/assets/images/${data.name}.png`;
             return (
-                <Table.Row key={index}>
+                <Table.Row id="ticker_data" key={index}>
                     <Table.Cell>
-                        {data.rank}
+                      {data.rank}
                     </Table.Cell>
                     <Table.Cell>
                         <Header as='h4' image>
@@ -49,7 +49,7 @@ class Ticker extends Component {
                         </Header>
                     </Table.Cell>
                     <Table.Cell>
-                        ${parseFloat(data.price_usd).toFixed(2)}
+                        <span className="ticker_price">Price USD: </span>${parseFloat(data.price_usd).toFixed(2)}
                     </Table.Cell>
                     <Table.Cell className={data.percent_change_1h < 0 ? "red-percent": "green-percent"}>
                         {data.percent_change_1h}%
@@ -63,7 +63,7 @@ class Ticker extends Component {
         return (
             <Table id="ticker" basic='very' celled collapsing>
 
-                <Table.Header>
+                <Table.Header id="ticker_header">
                     <Table.Row>
                         <Table.HeaderCell>Rank</Table.HeaderCell>
                         <Table.HeaderCell>Currency</Table.HeaderCell>
