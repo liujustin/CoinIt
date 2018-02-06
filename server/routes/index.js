@@ -2,9 +2,9 @@
 const apiConfig = require('../coin_api/api');
 const userConfig = require('./user');
 
-const routesConfig = (app) => {
+const routesConfig = (app,passport) => {
     apiConfig(app);
-    userConfig(app);
+    userConfig(app, passport);
 };
 
 module.exports = routesConfig;
