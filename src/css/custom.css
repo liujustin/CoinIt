@@ -123,6 +123,7 @@
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
     #ticker {
+      margin-top: 10%;
       margin-left: auto;
       margin-right: auto;
       text-align: center;
