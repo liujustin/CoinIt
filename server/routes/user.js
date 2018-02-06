@@ -1,8 +1,8 @@
 var User = require('../models/user');
 
 const userConfig = (app) => {
-
-  app.get('/users/all', function(req, res) {
+ // Too see all users in DB
+ app.get('/users/all', function(req, res) {
     User.find({}, (err, users) => {
       res.json(users)
     })

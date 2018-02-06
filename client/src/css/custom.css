@@ -1,0 +1,81 @@
+/** Navbar CSS **/
+.ui.menu {
+    background: #343434;
+}
+
+.crypto-image {
+    height: 35px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.logo-left {
+    position: absolute;
+    margin-left: 10px;
+    padding: 0;
+}
+
+.logo-text {
+    position: absolute;
+    margin-top: 0;
+    margin-right: 10px;
+    padding: 0;
+    left: 55px;
+    color: white;
+    font-size: 25px;
+}
+
+.menu-text {
+    color: white;
+    font-style: bold;
+}
+
+/** Login CSS **/
+.column {
+    max-width: 100%;
+    margin-top: -15%;
+}
+
+.login-container {
+    top: 50%;
+    margin-top: 30%;
+    height: 100px;
+    width: 600px;
+    justify-content: center;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/** App CSS **/
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.App-title {
+    font-size: 1.5em;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+@keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

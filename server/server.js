@@ -1,7 +1,7 @@
-const session = require('express-session')
+const dotenv = require('dotenv').config();
+const session = require('express-session');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const dotenv = require('dotenv').config();
 const bodyParser = require('body-parser');
 
 const serverConfig = (app,passport) => {
