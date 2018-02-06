@@ -12,7 +12,7 @@ class Navbar extends Component {
           <div class="ui fixed menu">
             <div class="ui container">
                 <a href="/" class="left header item">
-                    <img class="crypto-image" src="../assets/images/bitcoin.png" alt="crypto logo"/>
+                    <img class="crypto-image" src="../assets/images/Bitcoin.png" alt="crypto logo"/>
                     <span class="logo-text">CoinIt!</span>
                 </a>
                 <div class="right menu">

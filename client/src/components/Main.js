@@ -12,8 +12,8 @@ export default class Main extends Component {
         <main>
           <Switch>
             <Route exact path='/' component={ Ticker } />
-            <Route exact path='/login' component={ Login } />
-            <Route exact path='/register' component={ Register }/>
+          {/** <Route exact path='/login' component={ Login } /> **/}
+          {/**  <Route exact path='/register' component={ Register }/> **/}
           </Switch>
         </main>
       )

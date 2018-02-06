@@ -61,11 +61,11 @@ class Ticker extends Component {
             )
         });
         return (
-            <Table basic='very' celled collapsing>
+            <Table id="ticker" basic='very' celled collapsing>
                 <Table.Header>
                     <Table.Row>
                         <Table.HeaderCell>Rank</Table.HeaderCell>
-                        <Table.HeaderCell>Crypto</Table.HeaderCell>
+                        <Table.HeaderCell>Currency</Table.HeaderCell>
                         <Table.HeaderCell>Price in USD</Table.HeaderCell>
                         <Table.HeaderCell>Percent Change(1H)</Table.HeaderCell>
                         <Table.HeaderCell>Percent Change(24HR)</Table.HeaderCell>
