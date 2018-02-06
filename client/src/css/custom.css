@@ -80,7 +80,7 @@
     to { transform: rotate(360deg); }
 }
 
-/** Ticker CSS **/
+/** Ticker **/
 
 .ticker {
     margin-top: 10em;
@@ -97,4 +97,12 @@
 /** Charts **/
 .column {
     margin-top: 6em;
+}
+
+#ticker {
+  margin-top: 5em;
+  margin-left: 10em;
+  width: 90em;
+  height: 50em;
+  margin-right: 10em;
 }
