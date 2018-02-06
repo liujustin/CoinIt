@@ -81,10 +81,20 @@
 }
 
 /** Ticker **/
+
 .ticker {
     margin-top: 10em;
 }
 
+.red-percent {
+    color: red;
+}
+
+.green-percent {
+    color: green;
+}
+
+/** Charts **/
 .column {
     margin-top: 6em;
 }

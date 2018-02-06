@@ -51,10 +51,10 @@ class Ticker extends Component {
                     <Table.Cell>
                         ${parseFloat(data.price_usd).toFixed(2)}
                     </Table.Cell>
-                    <Table.Cell>
+                    <Table.Cell className={data.percent_change_1h < 0 ? "red-percent": "green-percent"}>
                         {data.percent_change_1h}%
                     </Table.Cell>
-                    <Table.Cell>
+                    <Table.Cell className={data.percent_change_24h < 0 ? "red-percent" : "green-percent"}>
                         {data.percent_change_24h}%
                     </Table.Cell>
                 </Table.Row>
@@ -62,6 +62,7 @@ class Ticker extends Component {
         });
         return (
             <Table id="ticker" basic='very' celled collapsing>
+
                 <Table.Header>
                     <Table.Row>
                         <Table.HeaderCell>Rank</Table.HeaderCell>
