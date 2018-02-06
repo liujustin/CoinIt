@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import Login from './User/Login';
 import Register from './User/Register';
-import TestChart from './Highcharts/TestChart';
+import TestChart from './Highcharts/Ticker';
 
 export default class Main extends Component {
 
@@ -11,7 +11,7 @@ export default class Main extends Component {
       return(
         <main>
           <Switch>
-            <Route exact path='/' component={ TestChart } />
+            <Route exact path='/' component={ Ticker } />
             <Route exact path='/login' component={ Login } />
             <Route exact path='/register' component={ Register }/>
           </Switch>
