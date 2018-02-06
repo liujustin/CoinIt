@@ -101,8 +101,10 @@
 }
 
 #ticker {
-  margin-top: 5%;
-  margin-left: 5%;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   width: 90%  ;
   height: 50em;
 }
