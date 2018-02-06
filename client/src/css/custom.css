@@ -80,8 +80,18 @@
     to { transform: rotate(360deg); }
 }
 
+/** Ticker CSS **/
+
 .ticker {
     margin-top: 10em;
+}
+
+.red-percent {
+    color: red;
+}
+
+.green-percent {
+    color: green;
 }
 
 /** Charts **/
