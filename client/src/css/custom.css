@@ -90,25 +90,10 @@
     color: red;
 }
 
-.red-percent:before {
-    visibility: hidden;
-    margin-right: -8em;
-    font-family: FontAwesome;
-    color: black;
-    content: "\f078";
-}
-
 .green-percent {
     color: green;
 }
 
-.green-percent:before {
-    visibility: hidden;
-    margin-right: -8em;
-    font-family: FontAwesome;
-    color: black;
-    content: 'Price Change (1h): \f077';
-}
 
 /** Charts **/
 .column {
@@ -116,11 +101,10 @@
 }
 
 #ticker {
-  margin-top: 5em;
-  margin-left: 10em;
-  width: 90em;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 90%  ;
   height: 50em;
-  margin-right: 10em;
 }
 
 .ticker_price {
@@ -164,34 +148,7 @@
       margin-left: 0em;
     }
 
-    .green-percent:before {
-        visibility: visible;
-        margin-right: 0em;
-        font-family: FontAwesome;
-        color: black;
-        content: '\f077';
-    }
-
-    .red-percent:before {
-        visibility: hidden;
-        margin-right: -8em;
-        font-family: FontAwesome;
-        color: black;
-        content: "\f078";
-    }
-
     #ticket_1hr {
       visibility: hidden;
     }
-}
-
-/* ----------- Google Pixel XL ----------- */
-
-/* Portrait and Landscape */
-@media screen
-  and (device-width: 360px)
-  and (device-height: 640px)
-  and (-webkit-device-pixel-ratio: 4) {
-
-
 }
