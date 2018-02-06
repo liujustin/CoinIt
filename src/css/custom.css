@@ -1,0 +1,154 @@
+/** Navbar CSS **/
+.ui.menu {
+    background: #343434;
+}
+
+.crypto-image {
+    height: 35px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.logo-left {
+    position: absolute;
+    margin-left: 10px;
+    padding: 0;
+}
+
+.logo-text {
+    position: absolute;
+    margin-top: 0;
+    margin-right: 10px;
+    padding: 0;
+    left: 55px;
+    color: white;
+    font-size: 25px;
+}
+
+.menu-text {
+    color: white;
+    font-style: bold;
+}
+
+/** Login CSS **/
+.column {
+    max-width: 100%;
+    margin-top: -15%;
+}
+
+.login-container {
+    top: 50%;
+    margin-top: 30%;
+    height: 100px;
+    width: 600px;
+    justify-content: center;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/** App CSS **/
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    animation: App-logo-spin infinite 20s linear;
+    height: 80px;
+}
+
+.App-header {
+    background-color: #222;
+    height: 150px;
+    padding: 20px;
+    color: white;
+}
+
+.App-title {
+    font-size: 1.5em;
+}
+
+.App-intro {
+    font-size: large;
+}
+
+@keyframes App-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/** Ticker **/
+
+.ticker {
+    margin-top: 10em;
+}
+
+.red-percent {
+    color: red;
+}
+
+.green-percent {
+    color: green;
+}
+
+
+/** Charts **/
+.column {
+    margin-top: 6em;
+}
+
+#ticker {
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 90%  ;
+  height: 50em;
+}
+
+.ticker_price {
+  visibility: hidden;
+  margin-left: -5em;
+}
+
+
+
+/** Mpbile **/
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    #ticker {
+      margin-top: 5em;
+      margin-left: 0em;
+      width: 100%;
+      margin-right: 0em;
+      display: flow-root;
+    }
+
+    table {
+      zoom: 115%;
+    }
+
+    #ticker_header {
+      margin-bottom: -12em;
+      visibility: hidden;
+    }
+
+    #ticker_data {
+      display:inline-table;
+    }
+
+    .ticker_price {
+      visibility: visible;
+      margin-left: 0em;
+    }
+
+    #ticket_1hr {
+      visibility: hidden;
+    }
+}

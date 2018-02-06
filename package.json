@@ -1,28 +1,25 @@
 {
-  "name": "crypto_tracker_server",
-  "version": "1.1.1",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server/app.js",
-    "concurrent": "concurrently 'npm run server' 'cd client && npm start'",
-    "start": "npm run concurrent"
-  },
-  "author": "",
-  "license": "ISC",
+  "name": "client",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
     "axios": "^0.17.1",
-    "bcrypt": "^1.0.3",
-    "body-parser": "^1.18.2",
-    "concurrently": "^3.5.1",
-    "cors": "^2.8.4",
-    "dotenv": "^5.0.0",
-    "express": "^4.16.2",
-    "express-session": "^1.15.6",
-    "mongoose": "^5.0.3",
-    "nodemon": "^1.14.11",
-    "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
+    "font-awesome": "^4.7.0",
+    "highcharts": "^5.0.14",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-highcharts": "^16.0.2",
+    "react-jsx-highcharts": "^2.1.0",
+    "react-jsx-highstock": "^2.1.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.0",
+    "semantic-ui-react": "^0.77.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }
