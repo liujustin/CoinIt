@@ -102,10 +102,8 @@
 
 #ticker {
   margin-top: 10%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  width: 90%  ;
+  margin-left: 5%;
+  width: 90%;
   height: 50em;
 }
 
@@ -125,10 +123,10 @@
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
     #ticker {
-      margin-top: 5em;
-      margin-left: 0em;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
       width: 100%;
-      margin-right: 0em;
       display: flow-root;
     }
 
