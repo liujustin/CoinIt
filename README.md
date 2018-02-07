@@ -1,6 +1,6 @@
 # CoinIt
 
-**Still in Development**
+https://coinitapp.herokuapp.com/
 
 A project to track the prices and ranks of the top 10 cryptocurrenices using the coinmarketcap api.
 
