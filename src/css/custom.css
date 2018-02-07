@@ -30,6 +30,11 @@
     font-style: bold;
 }
 
+.ticker_time {
+  color: white;
+  margin-top: 0.5em;
+}
+
 /** Login CSS **/
 .column {
     max-width: 100%;
@@ -122,6 +127,13 @@
   and (min-device-width: 375px)
   and (max-device-width: 667px)
   and (-webkit-min-device-pixel-ratio: 2) {
+
+    .ticker_time {
+      color: white;
+      margin-top: 0.5em;
+      margin-right: 1em;
+    }
+
     #ticker {
       margin-top: 20%;
       margin-left: auto;

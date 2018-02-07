@@ -6,6 +6,7 @@
     "axios": "^0.17.1",
     "font-awesome": "^4.7.0",
     "highcharts": "^5.0.14",
+    "moment": "^2.20.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -14,6 +15,7 @@
     "react-jsx-highstock": "^2.1.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.0",
+    "react-time": "^4.3.0",
     "semantic-ui-react": "^0.77.2"
   },
   "scripts": {

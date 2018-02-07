@@ -2,8 +2,31 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import { Button, Menu } from 'semantic-ui-react';
+import Time from 'react-time';
 
 class Navbar extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      now: new Date(),
+    };
+    this.interval = null;
+  };
+
+
+  componentDidMount() {
+    const self = this;
+    self.interval = setInterval(() => {
+      self.setState({
+        now: new Date(),
+      });
+    }, 1000);
+  };
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  };
 
   render () {
     return (
@@ -18,7 +41,14 @@ class Navbar extends Component {
               {/* <div class="right menu">
                     <a href="/login" class="item"><span class="menu-text">Login</span></a>
                 </div>
-                */}                
+                */}
+                <div className="right menu">
+                  <span className="ticker_time">
+                  <Time value={this.state.now} format="MM/DD/YYYY" />
+                  <br />
+                  <Time value={this.state.now} format="HH:mm A" />
+                  </span>
+                </div>
                 </div>
             </div>
           </div>
