@@ -62,7 +62,6 @@ class Ticker extends Component {
         });
         return (
             <Table id="ticker" basic='very' celled collapsing>
-
                 <Table.Header id="ticker_header">
                     <Table.Row>
                         <Table.HeaderCell>Rank</Table.HeaderCell>
