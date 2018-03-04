@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, '/client/build')));
 
 // "catchall" for routes that do not match one of the routes
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname+'/client/build/index.html'));
+    res.sendFile(path.resolve(__dirname, '../client/build/', 'index.html'));
 });
 
 // Express server port
