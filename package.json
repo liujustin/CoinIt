@@ -11,8 +11,8 @@
     "concurrent": "concurrently 'npm run nodemon' 'cd client && npm start'"
   },
   "cacheDirectories": [
-   "node_modules",
-   "client/node_modules"
+       "node_modules",
+       "client/node_modules"
   ],
   "repository": {
     "type": "git",
