@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Header, Image, Table } from 'semantic-ui-react'
 
-const api_url = "https://api.coinmarketcap.com/v1/ticker/?limit=10";
-
 class Ticker extends Component {
     constructor(props) {
         super(props);
@@ -12,21 +10,17 @@ class Ticker extends Component {
         }
     }
 
-    componentDidMount(){
-        axios.get(api_url).then(response => {
-            // loop through each for its name
-            for (var i = 0; i < response.data.length; i++) {
-                console.log('Name:' + response.data[i].name);
-                console.log('Symbol: ' + response.data[i].symbol);
-                console.log('Price in USD: ' + response.data[i].price_usd);
-                console.log('Rank: ' + response.data[i].rank);
-                console.log('===============');
+    componentDidMount() {
+        axios.get('/api')
+            .then(response => {
                 this.setState({
                     cryptoArray: response.data
-                });
-            }
-        });
-    };
+                })
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
 
 
     render() {

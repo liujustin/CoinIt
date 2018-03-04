@@ -1,27 +1,32 @@
 {
-  "name": "client",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "axios": "^0.17.1",
-    "font-awesome": "^4.7.0",
-    "highcharts": "^5.0.14",
-    "moment": "^2.20.1",
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-highcharts": "^16.0.2",
-    "react-jsx-highcharts": "^2.1.0",
-    "react-jsx-highstock": "^2.1.0",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "1.1.0",
-    "react-time": "^4.3.0",
-    "semantic-ui-react": "^0.77.2"
-  },
+  "name": "coinit",
+  "version": "1.0.0",
+  "description": "https://coinitapp.herokuapp.com/",
+  "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js",
+    "nodemon": "nodemon server/app.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "concurrent": "concurrently 'npm run nodemon' 'cd client && npm start'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liujustin/CoinIt.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liujustin/CoinIt/issues"
+  },
+  "homepage": "https://github.com/liujustin/CoinIt#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.17.1"
   }
 }

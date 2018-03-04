@@ -10,6 +10,7 @@ class Navbar extends Component {
     super(props);
     this.state = {
       now: new Date(),
+      search_name: ""
     };
     this.interval = null;
   };
