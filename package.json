@@ -7,9 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/app.js",
     "nodemon": "nodemon server/app.js",
-    "heroku-postbuild": "cd client && npm install && npm run build",
+    "heroku-postbuild": "cd client/ && npm install && npm run build",
     "concurrent": "concurrently 'npm run nodemon' 'cd client && npm start'"
   },
+  "cacheDirectories": [
+   "node_modules",
+   "client/node_modules"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/liujustin/CoinIt.git"

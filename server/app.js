@@ -6,10 +6,11 @@ const configRoutes = require('./routes');
 // Express
 const app = express();
 
+// API Routes
 configRoutes(app);
 
 // Serve static files from React
-app.use(express.static(path.join(__dirname, '/client/build')));
+app.use(express.static(path.resolve(__dirname, '../client/build')));
 
 // "catchall" for routes that do not match one of the routes
 app.get('*', (req, res) => {
