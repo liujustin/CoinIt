@@ -28,6 +28,7 @@
     "axios": "^0.18.0",
     "bcrypt": "^1.0.3",
     "body-parser": "^1.18.2",
+    "crypto": "^1.0.1",
     "express": "^4.16.2",
     "jsonwebtoken": "^8.2.0",
     "mongoose": "^5.0.9",

@@ -11,7 +11,7 @@ class Ticker extends Component {
     }
 
     componentDidMount() {
-        axios.get('/api')
+        axios.get('/api/ticker')
             .then(response => {
                 this.setState({
                     cryptoArray: response.data

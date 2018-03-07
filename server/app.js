@@ -6,22 +6,26 @@ const morgan = require('morgan');
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const mongoose = require('mongoose');
-const config = require('./config/index');
+const config = require('./config/main');
 
-// API Routes
-const configRoutes = require('./routes');
+const router = require('./routes');
 
 // MongoDB Connection
 mongoose.connect(config.database);
 
 // Express Server
 const app = express();
-configRoutes(app);
+
+// API Routes
+router(app);
+
 // Bodyparser to get POST requests for API use
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+
 // Logger for application requests
 app.use(morgan('dev'));
+
 // Enable CORS for React
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -30,20 +34,6 @@ app.use((req, res, next) => {
     res.header("Access-Control-Allow-Credentials", "true");
     next();
 })
-// Listening Port
-const port = app.listen(config.port);
-console.log("Server listening on port " + config.port);
-
-
-
-
-
-
-
-/**
-
-
-commented out for dev purposes
 
 // Serve static files from React build
 app.use(express.static(path.resolve(__dirname, '../client/build')));
@@ -52,5 +42,16 @@ app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../client/build/', 'index.html'));
 });
 
+// Listening Port
+const port = app.listen(config.port);
+console.log("Server listening on port " + config.port);
+
+
+
+
+/**
+
+Used mainly for production
+commented out for dev purposes
 
 **/
