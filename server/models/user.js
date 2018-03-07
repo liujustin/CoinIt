@@ -42,7 +42,6 @@ userSchema.pre('save', function (next) {
   });
 });
 
-
 // Validate user's password
 userSchema.methods.comparePassword = (candidatePassword, cb) => {
     bcrypt.compare(comparePassword, this.password, (err, isMatch) => {

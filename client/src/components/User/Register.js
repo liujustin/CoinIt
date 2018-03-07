@@ -22,7 +22,7 @@ export default class Register extends Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        axios.post('/api/register', {
+        axios.post('/api/user/register', {
             email: this.state.email,
             firstName: this.state.firstName,
             lastName: this.state.lastName,
@@ -30,10 +30,12 @@ export default class Register extends Component {
         })
         .then((response) => {
             console.log(response)
+
         })
         .catch(err => {
             console.log(err)
         })
+        this.props.history.push('/');
     }
 
     render() {
