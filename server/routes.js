@@ -20,6 +20,7 @@ module.exports = (app) => {
     /**
         User Routes
     **/
+    UserRoutes.get('/', UserController.allUsers);
     UserRoutes.post('/register', UserController.register);
     UserRoutes.post('/login', passportLogin, UserController.login);
     /**

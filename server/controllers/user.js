@@ -1,3 +1,4 @@
+'use strict '
 const jwt = require('jsonwebtoken'),
       crypto = require('crypto'),
       User = require('../models/user'),
@@ -10,16 +11,23 @@ function generateToken(user) {
     });
 }
 // set user info to pass from request
-function setUserInfo(req) {
+function setUserInfo(request) {
     return {
-        _id: req._id,
-        firstName: req.profile.firstName,
-        lastName: req.profile.lastName,
-        email: req.email,
-        role: req.role
+        _id: request._id,
+        firstName: request.profile.firstName,
+        lastName: request.profile.lastName,
+        email: request.email,
     };
 }
 
+/**
+    Get All Users
+**/
+exports.allUsers = (req, res) => {
+    User.find({}, (err, users ) => {
+        res.json(users);
+    });
+}
 /**
     Post Login
 **/
@@ -59,7 +67,7 @@ exports.register = (req, res, next) => {
         });
     }
     // Check for existing user
-    User.findOne({email: email}, (err, existingUser) => {
+    User.findOne({ email: email }, (err, existingUser) => {
         if(err) { return next(err); }
 
         if(existingUser) {
@@ -67,7 +75,7 @@ exports.register = (req, res, next) => {
                 error: "This email is already in use"
             });
         }
-
+        // Create User
         let user = new User({
             email: email,
             password: password,
@@ -76,6 +84,8 @@ exports.register = (req, res, next) => {
                 lastName: lastName
             }
         });
+
+        console.log(user);
 
         user.save((err, user) => {
             if(err) { return next(err); }

@@ -1,7 +1,7 @@
 // Modules
 const mongoose = require('mongoose'),
       Schema = mongoose.Schema,
-      bcrypt = require('bcrypt');
+      bcrypt = require('bcrypt-nodejs');
 
 // User Schema
 const userSchema = new Schema ({
@@ -29,18 +29,19 @@ const userSchema = new Schema ({
     { timestamps: true });
 
 // Password hashing middleware
-userSchema.pre('save', (next) =>  {
-    const user = this;
-    if(!user.isModified('password')) { return next(); }
-    bcrypt.genSalt(10, (err, salt) => {
-        if(err) { return next(err); }
-        bcrypt.hash(user.password, salt, null, (err, hash) => {
-            if(err) { return next(err); }
-            user.password = hash;
-            next();
-        });
+userSchema.pre('save', function (next) {
+  const user = this;
+  if (!user.isModified('password')) { return next(); }
+  bcrypt.genSalt(10, (err, salt) => {
+    if (err) { return next(err); }
+    bcrypt.hash(user.password, salt, null, (err, hash) => {
+      if (err) { return next(err); }
+      user.password = hash;
+      next();
     });
+  });
 });
+
 
 // Validate user's password
 userSchema.methods.comparePassword = (candidatePassword, cb) => {

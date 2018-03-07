@@ -10,7 +10,7 @@ const passport = require('passport'),
     Options for Login Auth
 **/
 // Use email instead of username as "username"
-const localOptions = { usernameFiel: 'email' };
+const localOptions = { usernameField: 'email' };
 // JWT auth options
 const jwtOptions = {
     jwtFromRequest: ExtractJwt.fromAuthHeaderWithScheme("jwt"),

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Header, Image, Table } from 'semantic-ui-react'
 
-class Ticker extends Component {
+export default class Ticker extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -21,7 +21,6 @@ class Ticker extends Component {
                 console.log(err);
             })
     }
-
 
     render() {
         const crypto = this.state.cryptoArray.map((data, index) => {
@@ -72,5 +71,3 @@ class Ticker extends Component {
         )
     }
 }
-
-export default Ticker;

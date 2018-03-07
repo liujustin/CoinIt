@@ -117,7 +117,10 @@
   margin-left: -5em;
 }
 
-
+/** Register**/
+.register-form {
+    margin-top: 10em;
+}
 
 /** Mpbile **/
 /* ----------- iPhone 6, 6S, 7 and 8 ----------- */
