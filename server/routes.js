@@ -21,7 +21,7 @@ module.exports = (app) => {
     /**
         User Routes
     **/
-    UserUrl.use('/user', UserRoutes);
+    UserUrl.use('/user', UserRoutes); // start of url ie) /user/{whatever other routes}
     UserRoutes.get('/', UserController.allUsers);
     UserRoutes.post('/register', UserController.register);
     UserRoutes.post('/login', passportLogin, UserController.login);
