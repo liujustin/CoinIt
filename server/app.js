@@ -32,13 +32,6 @@ app.use((req, res, next) => {
     next();
 })
 
-// Serve static files from React build
-app.use(express.static(path.resolve(__dirname, '../client/build')));
-// "catchall" for routes that do not match one of the routes
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/build/', 'index.html'));
-});
-
 // API Routes
 router(app);
 
@@ -46,12 +39,15 @@ router(app);
 const port = app.listen(config.port);
 console.log("Server listening on port " + config.port);
 
-
-
-
 /**
 
-Used mainly for production
-commented out for dev purposes
+Code Below Used mainly for production
+Should comment out for dev purposes
 
+// Serve static files from React build
+app.use(express.static(path.resolve(__dirname, '../client/build')));
+// "catchall" for routes that do not match one of the routes
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../client/build/', 'index.html'));
+});
 **/

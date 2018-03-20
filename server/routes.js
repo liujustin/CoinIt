@@ -17,6 +17,7 @@ const UserController = require('./controllers/user'),
 module.exports = (app) => {
     const UserUrl = express.Router();
     const UserRoutes = express.Router();
+		const TickerUrl = express.Router();
     const TickerRoutes = express.Router();
     /**
         User Routes
@@ -28,10 +29,11 @@ module.exports = (app) => {
     /**
         Ticker Routes
     **/
-    TickerRoutes.get('/ticker',  TickerController.ticker);
+    TickerUrl.use('/ticker', TickerRoutes);
+		TickerRoutes.get('/', TickerController.ticker);
 
     // URL for routes
     // ie) To access ticker api, go to '/api/ticker'
     // ie) To access user api, go to '/api/login'
-    app.use('/api', UserUrl, TickerRoutes);
+    app.use('/api', UserUrl, TickerUrl);
 };
